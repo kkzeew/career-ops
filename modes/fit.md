@@ -35,24 +35,9 @@ Map the top 5 JD requirements to `cv.md`. For each requirement:
 
 Only flag hard gaps. Nice-to-haves that are missing are not blockers and should not appear here.
 
-### 3. Culture & Environment Fit
-
-Extract culture signals from the JD and match against candidate preferences (from `config/profile.yml` if set, otherwise infer from cv.md career trajectory):
-
-- **Team stage**: early-stage startup / scaleup / enterprise / government
-- **Work style**: async-first / sync-heavy / mixed
-- **Engineering culture**: builder/shipping culture / research-first / process-heavy / compliance-driven
-- **Values language**: look for phrases like "move fast", "data-driven", "customer obsessed", "ownership", "enterprise-grade", "cross-functional", "zero-to-one"
-
-Call out any signal that suggests a strong culture match OR a likely mismatch.
-
-### 4. HR Impression Factors
-
-What from the candidate's background directly answers this JD in a way that stands out:
-
-- 1-2 specific proof points from `cv.md` that map precisely to the JD's core ask (concrete, quantified if possible)
-- Any unique differentiators: shipped to production at scale, led a team, built 0→1, domain expertise that is rare for this role
-- Any potential red flag that HR might flag (e.g. overqualified, career gap, different industry) — and a one-line way to pre-empt it
+### 3. Sponsorship
+- if this jd explicitly state that they don't sponsor, score should be 0 and flag this for user; if they explicitly state they sponsor, score 1.
+- note that most companies don't state anything for sponsorship, score a 0.5 for these cases.
 
 ## Step 2 — Output format
 
@@ -72,13 +57,6 @@ What from the candidate's background directly answers this JD in a way that stan
 |----------------|-------|-----------------------|
 | {req 1} | ✅/⚠️/❌ | {exact line or project from cv.md} |
 | {req 2} | ... | ... |
-
-### Culture signals
-- **{signal}**: {match / likely mismatch — one line}
-
-### What would impress HR
-- {proof point 1 — specific and quantified}
-- {proof point 2}
 
 ### Watch out for
 - {gap or red flag + how to address it}
@@ -105,13 +83,13 @@ Produce the per-URL summary above for each, then close with a comparison table:
 
 ## Scoring weights
 
-Fit Score is a weighted average across the 4 dimensions:
+Fit Score is a weighted average across the 3 dimensions:
 
 | Dimension | Weight |
 |-----------|--------|
-| Background fit | 55% |
-| Culture & environment fit | 25% |
-| HR impression factors | 20% |
+| Background fit | 75% |
+| Archetype Match | 20% |
+| Sponsorship | 5% |
 
 ## Rules
 
