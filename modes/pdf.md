@@ -33,20 +33,21 @@
 
 ## PDF Design
 
-- **Fonts**: Space Grotesk (headings, 600-700) + DM Sans (body, 400-500)
+- **Fonts**: Space Grotesk (name, section headers, company/project names) + DM Sans (all body text, bullets, contact, dates)
 - **Fonts self-hosted**: `fonts/`
-- **Header**: name in Space Grotesk 22-24px bold + gradient line `linear-gradient(to right, hsl(187,74%,32%), hsl(270,70%,45%))` 2px + contact row 9.5-10px
-- **Section headers**: Space Grotesk 10.5-11px, uppercase, letter-spacing 0.06em, color cyan primary
-- **Summary**: DM Sans 10-10.5px, line-height 1.55
-- **Body / bullets**: DM Sans 9.5-10px, line-height 1.5
-- **Company names**: color accent purple `hsl(270,70%,45%)`
-- **Margins**: 0.6in — managed exclusively by `generate-pdf.mjs` (the `margin` parameter in `page.pdf()`)
+- **Color palette**: black and white only — all text `#000` except secondary metadata (see below)
+- **Header**: name centered, Space Grotesk 28px bold, thin solid black line (1.5px) below name, contact row DM Sans 11px `#000`, `|` separators `#bbb`
+- **Section headers**: Space Grotesk 12px, bold, uppercase, letter-spacing 0.06em, `#000`, solid black `border-bottom: 1px solid #000`
+- **Company / project names**: Space Grotesk bold, `#000` (13px company, 12px project)
+- **Body / bullets**: DM Sans 11px, line-height 1.47, `#000`, `list-style-type: disc`
+- **Secondary metadata** (gray `#777`): job location tags (`.job-location`), project location tags (`.project-location`), education GPA/location sub-lines (`.edu-desc`)
+- **Margins**: 0.4in top/bottom, 0.5in left/right — managed exclusively by `generate-pdf.mjs` (the `margin` parameter in `page.pdf()`)
 - **`.page` div**: `padding: 0` always — do NOT add your own padding; the script already applies PDF margins. Adding padding here doubles the margin and may force content onto 2 pages.
 - **Background**: pure white
 
 ## Section order (optimized for the "6-second recruiter scan")
 
-1. Header (large name, gradient, contact, portfolio link)
+1. Header (large name centered, thin black divider, contact row)
 2. Professional Summary (3-4 lines, keyword-dense)
 3. Core Competencies (6-8 keyword phrases in flex-grid)
 4. Work Experience (reverse chronological) — JD keywords in **bold inline** within bullets

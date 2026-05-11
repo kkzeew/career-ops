@@ -248,14 +248,15 @@ node generate-pdf.mjs \
 - Keywords distribuidas: Summary (top 5), primer bullet de cada rol, Skills section
 
 **Diseño:**
-- Fonts: Space Grotesk (headings, 600-700) + DM Sans (body, 400-500)
+- Fonts: Space Grotesk (name, section headers, company/project names) + DM Sans (body, bullets, contact, dates)
 - Fonts self-hosted: `fonts/`
-- Header: Space Grotesk 24px bold + gradiente cyan→purple 2px + contacto
-- Section headers: Space Grotesk 13px uppercase, color cyan `hsl(187,74%,32%)`
-- Body: DM Sans 11px, line-height 1.5
-- Company names: purple `hsl(270,70%,45%)`
-- Márgenes: 0.6in
-- Background: blanco
+- Header: Space Grotesk 28px bold, centered, thin solid black line (1.5px), contact row 11px, `|` separators `#bbb`
+- Section headers: Space Grotesk 12px uppercase, bold, `#000`, solid black border-bottom
+- Body / bullets: DM Sans 11px, line-height 1.47, `#000`, list-style-type disc
+- Company/project names: Space Grotesk bold, `#000`
+- Secondary metadata gray `#777`: job-location, project-location, edu-desc (GPA/location)
+- Márgenes: 0.4in top/bottom, 0.5in left/right
+- Background: blanco puro
 
 **Estrategia keyword injection (ético):**
 - Reformular experiencia real con vocabulario exacto del JD
